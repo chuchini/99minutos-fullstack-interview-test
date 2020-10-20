@@ -12,7 +12,11 @@
 </head>
 
 <nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+<<<<<<< HEAD
     <a class="navbar-brand" href="/">HOME</a>
+=======
+    <a class="navbar-brand" href="#">OPTIONS</a>
+>>>>>>> bbaa79f4204216eceb63f5c06b28253e587027ac
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -23,7 +27,11 @@
                 <a class="nav-link" href="\branches">branches</a>
             </li>
             <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="\pullrequests">View pull requests</a>
+=======
+                <a class="nav-link" href="\pullrequests">View Pull Requests</a>
+>>>>>>> bbaa79f4204216eceb63f5c06b28253e587027ac
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="\pullrequests\newpr">New pull request</a>
