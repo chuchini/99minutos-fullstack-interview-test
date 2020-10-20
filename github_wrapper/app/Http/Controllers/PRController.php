@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\Http;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
+
+/**
+ * Modela los pull requests y sus operaciones con la API de github
+ */
 class PRController extends Controller 
 {
     
