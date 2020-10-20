@@ -1,3 +1,18 @@
+## Instructions to setup this laravel project
+
+In order to run this project on your machine, do the following:
+
+1. Clone this repo on your local machine.
+2. Once the project is in your machine, navigate to the project folder (using the terminal).
+3. Install the project dependencies from composer (run in terminal: composer install).
+4. Install npm dependencies (run in terminal: npm install).
+5. php artisan key:generate
+6. php artisan serve (to run the server in localhost, follow the link it display on screen).
+
+The last thing you need to do is create a copy file of the .env.example file (run cp .env.example .env).
+and add your github user and token (if you don't have a token, please generate one. 
+(https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+
 
 # 99minutos Fullstack Engineer Interview
 Interview test for fullstack Software Engineers
