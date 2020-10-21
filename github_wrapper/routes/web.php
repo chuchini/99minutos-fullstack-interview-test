@@ -35,6 +35,10 @@ Route::post('/pullrequests/newpr', [PRController::class, 'createPR']);
 
 Route::get('/pullrequests/newpr', [PRController::class, 'newpr']);
 
-Route::get('/error', function() {
-    return View::make('error');
+Route::get('/errorpr', function() {
+    return View::make('err_pr');
+});
+
+Route::get('/errorcredentials', function() {
+    return View::make('err_credentials');
 });

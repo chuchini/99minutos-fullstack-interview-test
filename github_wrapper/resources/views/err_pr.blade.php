@@ -13,12 +13,8 @@
                         <div class="error-template">
                             <h1>
                                 Oops!</h1>
-                            <h5>
-                                It ocurred an error while we were trying to create or merge your pull request</h5>
-                            <div class="error-details">
-                                Please make sure the pull request
-                                is valid and as well the merge.
-                            </div>
+                            <h5>It ocurred an error while we were trying to create or merge your pull request</h5>
+                            <p>PLease make sure the pull request is valid as well the merge</p>
                             <center>
                                 <div class="error-actions mt-2">
                                 <a href="/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
