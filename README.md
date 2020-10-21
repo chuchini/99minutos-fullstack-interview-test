@@ -6,6 +6,7 @@ Requiremets:
 - Composer version 1.10.15 (https://getcomposer.org/doc/00-intro.md)
 - Laravel version 8.10.0 (https://laravel.com/docs/8.x/installation)
 - npm version 6.14.8 (https://www.npmjs.com/get-npm)
+- PHP version 7.4.3 (https://www.php.net/manual/es/install.php)
 
 In order to run this project on your machine, do the following:
 
