@@ -1,30 +1,48 @@
-## Instructions to setup this laravel project
+## Instrucciones para ejecutar este proyecto de laravel
 
-Please make sure you fulfill the following requirements.
+POr favor asegurate de cumplir con los siguientes requerimientos mínimos:
 
-Requiremets:
+Requerimientos:
 - Composer version 1.10.15 (https://getcomposer.org/doc/00-intro.md)
 - Laravel version 8.10.0 (https://laravel.com/docs/8.x/installation)
 - npm version 6.14.8 (https://www.npmjs.com/get-npm)
 - PHP version 7.4.3 (https://www.php.net/manual/es/install.php)
 
-In order to run this project on your machine, do the following:
+Sigue los siguientes pasos para ejecutar el proyecto en modo local en tu computadora:
 
-1. Clone this repo on your local machine.
-2. Once the project is in your machine, navigate to the project folder (using the terminal).
-3. Create the .env file using the .env.example file (run cp .env.example .env).
-4. You MUST enter your credentials (GITHUB_USER and GITHUB_TOKEN in the .env file created before).
-5. There are some PHP dependencies that laravel 8.10.0 require in order to work, it depends on your distribution.
-   This project was made in ubuntu. Make sure you have installed php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}.
-   To install in ubunut just run in the terminal 'sudo apt-get install php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}.
-   If it appear on screen additional packages, please follow the on screen structions to install them.
-6. Install the project dependencies from composer (run in terminal: composer install).
-7. Install npm dependencies (run in terminal: npm install).
-8. php artisan key:generate
-9. php artisan serve (to run the server in localhost, follow the link it display on screen).
+1. Clona este repositorio en tu equipo.
+2. Una vez que hayas clonado el repositorio, navega hasta el folder de github_wrapper.
+3. Para crear el archivo .env, ejecuta:
+```
+cp .env.example .env
+```
+4. Debes ingresar tus credenciales de acceso de github en el archivo .env (GITHUB_USER y GITHUB_TOKEN).
+5. Existen algunas dependencias de PHP que laravel 8.10.0 requiere para trabajar, dependiendo de la distribución de
+   SO que estes utilizando. Este proyecto se realizo en ubuntu, para ello es necesario ejecutar:
+```
+sudo apt-get install php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}
+```
+   Si se requiere alguna dependencia extra, sigue las instrucciones para instalarla que te aparezcan en pantalla.
+6. Para instalar las dependencias de composer ejecuta:
+```
+composer install
+```
+7. Para instalar las dependencias de npm ejecuta:
+```
+npm install
+```
+8. Para generar la llave de laravel ejecuta:
+```
+php artisan key:generate
+```
+9. Para poner en marcha el servidor local ejecuta:
+```
+php artisan serve
+```
+Y sigue el link que aparece en pantalla.
 
-Don't forget your github credentials. If you don't have a token you can make one following the official github instructions:
-(https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+Nuevamente, no olvide generar las credenciales de github. Para mayor información en como hacerlo visita el sitio oficial
+de github: https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token
 
 ## Puntos importantes del código
 Las carpetas principales donde se hacen los cambios y se almacenan los archivos para el funcionamiento de la web app son:
