@@ -1,12 +1,11 @@
 ## Instructions to setup this laravel project
 
-Before continue, please make sure you have installed composer and laravel in your machine,
-if not, please follow their instructions:
-- laravel 8: https://laravel.com/docs/8.x/installation (you must have laravel 8.x at least)
-- composer: https://getcomposer.org/doc/00-intro.md
+Please make sure you fulfill the following requirements.
 
-As well you need to have installed npm to run one command below.
-- npm: https://www.npmjs.com/get-npm
+Requiremets:
+- Composer version 1.10.15 (https://getcomposer.org/doc/00-intro.md)
+- Laravel version 8.10.0 (https://laravel.com/docs/8.x/installation)
+- npm version 6.14.8 (https://www.npmjs.com/get-npm)
 
 In order to run this project on your machine, do the following:
 
@@ -20,6 +19,23 @@ In order to run this project on your machine, do the following:
 The last thing you need to do is create a copy file of the .env.example file (run cp .env.example .env).
 and add your github user and token (if you don't have a token, please generate one. 
 (https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+
+## Puntos importantes del código
+Las carpetas principales donde se hacen los cambios y se almacenan los archivos para el funcionamiento de la web app son:
+
+1. app/http/controllers/ ---> aquí se encuentran los controladores encargados de modelar los objetos de la API y hacer su envoltura,
+   para que en caso de que la API cambie, únicamente se tenga que cambiar el código de los métodos de los controladores en lugar
+   de todos los lugares donde se usara la API (en caso de que no se hiciera una envoltura).
+  
+2. app/public/js ---> aquí se encuentra un pequeño archivo custom.js para implementar una pequeña funcionalidad de la web app.
+
+3. app/resources/views ---> En esta carpeta encontraremos todas las vistas usadas en esta pequeña web app, así como otra carpeta layout
+   donde se encuentra el layout principal de la app, que extendemos a las demas vistas usando la funcionalidad de blade.
+   
+4. app/routes ---> Por último, aquí se encuentran las rutas que usaremos para las vistas, siendo que las que usamos se encuentran en
+   el archivo de web.php
+   
+Todo el código se encuentra documentado.
 
 
 # 99minutos Fullstack Engineer Interview
