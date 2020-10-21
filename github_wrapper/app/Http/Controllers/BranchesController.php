@@ -25,10 +25,6 @@ class BranchesController extends Controller
         $usuario = env('GITHUB_USER');
         $token = env('GITHUB_TOKEN');
 
-        if (env('GITHUB_USER') == '' || env('GITHUB_TOKEN') == '') {
-            return redirect('/errorcredentials');
-        }
-
         $response = Http::withBasicAuth($usuario, $token)->get('https://api.github.com/repos/chuchini/99minutos-fullstack-interview-test/branches');
         $branches = array_reverse($response->json());
 
@@ -45,9 +41,6 @@ class BranchesController extends Controller
         $usuario = env('GITHUB_USER');
         $token = env('GITHUB_TOKEN');
 
-        if (env('GITHUB_USER') == '' || env('GITHUB_TOKEN') == '') {
-            return redirect('/errorcredentials');
-        }
 
         $response = Http::withBasicAuth($usuario, $token)->get('https://api.github.com/repos/chuchini/99minutos-fullstack-interview-test/commits?sha=' . $sha);
         $branchInfo = $response->json();
