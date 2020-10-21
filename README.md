@@ -5,6 +5,9 @@ if not, please follow their instructions:
 - laravel 8: https://laravel.com/docs/8.x/installation (you must have laravel 8.x at least)
 - composer: https://getcomposer.org/doc/00-intro.md
 
+As well you need to have installed npm to run one command below.
+- npm: https://www.npmjs.com/get-npm
+
 In order to run this project on your machine, do the following:
 
 1. Clone this repo on your local machine.
