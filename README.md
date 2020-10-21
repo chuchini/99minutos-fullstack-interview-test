@@ -12,13 +12,18 @@ In order to run this project on your machine, do the following:
 
 1. Clone this repo on your local machine.
 2. Once the project is in your machine, navigate to the project folder (using the terminal).
-3. Install the project dependencies from composer (run in terminal: composer install).
-4. Install npm dependencies (run in terminal: npm install).
-5. php artisan key:generate
-6. php artisan serve (to run the server in localhost, follow the link it display on screen).
+3. Create the .env file using the .env.example file (run cp .env.example .env).
+4. You MUST enter your credentials (GITHUB_USER and GITHUB_TOKEN in the .env file created before).
+5. There are some PHP dependencies that laravel 8.10.0 require in order to work, it depends on your distribution.
+   This project was made in ubuntu. Make sure you have installed php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}.
+   To install in ubunut just run in the terminal 'sudo apt-get install php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}.
+   If it appear on screen additional packages, please follow the on screen structions to install them.
+6. Install the project dependencies from composer (run in terminal: composer install).
+7. Install npm dependencies (run in terminal: npm install).
+8. php artisan key:generate
+9. php artisan serve (to run the server in localhost, follow the link it display on screen).
 
-The last thing you need to do is create a copy file of the .env.example file (run cp .env.example .env).
-and add your github user and token (if you don't have a token, please generate one. 
+Don't forget your github credentials. If you don't have a token you can make one following the official github instructions:
 (https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
 
 ## Puntos importantes del código
