@@ -1,17 +1,47 @@
 ## Instructions to setup this laravel project
 
+Please make sure you fulfill the following requirements.
+
+Requiremets:
+- Composer version 1.10.15 (https://getcomposer.org/doc/00-intro.md)
+- Laravel version 8.10.0 (https://laravel.com/docs/8.x/installation)
+- npm version 6.14.8 (https://www.npmjs.com/get-npm)
+- PHP version 7.4.3 (https://www.php.net/manual/es/install.php)
+
 In order to run this project on your machine, do the following:
 
 1. Clone this repo on your local machine.
 2. Once the project is in your machine, navigate to the project folder (using the terminal).
-3. Install the project dependencies from composer (run in terminal: composer install).
-4. Install npm dependencies (run in terminal: npm install).
-5. php artisan key:generate
-6. php artisan serve (to run the server in localhost, follow the link it display on screen).
+3. Create the .env file using the .env.example file (run cp .env.example .env).
+4. You MUST enter your credentials (GITHUB_USER and GITHUB_TOKEN in the .env file created before).
+5. There are some PHP dependencies that laravel 8.10.0 require in order to work, it depends on your distribution.
+   This project was made in ubuntu. Make sure you have installed php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}.
+   To install in ubunut just run in the terminal 'sudo apt-get install php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}.
+   If it appear on screen additional packages, please follow the on screen structions to install them.
+6. Install the project dependencies from composer (run in terminal: composer install).
+7. Install npm dependencies (run in terminal: npm install).
+8. php artisan key:generate
+9. php artisan serve (to run the server in localhost, follow the link it display on screen).
 
-The last thing you need to do is create a copy file of the .env.example file (run cp .env.example .env).
-and add your github user and token (if you don't have a token, please generate one. 
+Don't forget your github credentials. If you don't have a token you can make one following the official github instructions:
 (https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+
+## Puntos importantes del código
+Las carpetas principales donde se hacen los cambios y se almacenan los archivos para el funcionamiento de la web app son:
+
+1. app/http/controllers/ ---> aquí se encuentran los controladores encargados de modelar los objetos de la API y hacer su envoltura,
+   para que en caso de que la API cambie, únicamente se tenga que cambiar el código de los métodos de los controladores en lugar
+   de todos los lugares donde se usara la API (en caso de que no se hiciera una envoltura).
+  
+2. app/public/js ---> aquí se encuentra un pequeño archivo custom.js para implementar una pequeña funcionalidad de la web app.
+
+3. app/resources/views ---> En esta carpeta encontraremos todas las vistas usadas en esta pequeña web app, así como otra carpeta layout
+   donde se encuentra el layout principal de la app, que extendemos a las demas vistas usando la funcionalidad de blade.
+   
+4. app/routes ---> Por último, aquí se encuentran las rutas que usaremos para las vistas, siendo que las que usamos se encuentran en
+   el archivo de web.php
+   
+Todo el código se encuentra documentado.
 
 
 # 99minutos Fullstack Engineer Interview
