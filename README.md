@@ -1,3 +1,66 @@
+## Instrucciones para ejecutar este proyecto de laravel
+
+POr favor asegurate de cumplir con los siguientes requerimientos mínimos:
+
+Requerimientos:
+- Composer version 1.10.15 (https://getcomposer.org/doc/00-intro.md)
+- Laravel version 8.10.0 (https://laravel.com/docs/8.x/installation)
+- npm version 6.14.8 (https://www.npmjs.com/get-npm)
+- PHP version 7.4.3 (https://www.php.net/manual/es/install.php)
+
+Sigue los siguientes pasos para ejecutar el proyecto en modo local en tu computadora:
+
+1. Clona este repositorio en tu equipo.
+2. Una vez que hayas clonado el repositorio, navega hasta el folder de github_wrapper.
+3. Para crear el archivo .env, ejecuta:
+```
+cp .env.example .env
+```
+4. Debes ingresar tus credenciales de acceso de github en el archivo .env (GITHUB_USER y GITHUB_TOKEN).
+5. Existen algunas dependencias de PHP que laravel 8.10.0 requiere para trabajar, dependiendo de la distribución de
+   SO que estes utilizando. Este proyecto se realizo en ubuntu, para ello es necesario ejecutar:
+```
+sudo apt-get install php7.4-{bcmath, bz2, intl, gd, mbstring, mysql, zip, php-xml}
+```
+   Si se requiere alguna dependencia extra, sigue las instrucciones para instalarla que te aparezcan en pantalla.
+6. Para instalar las dependencias de composer ejecuta:
+```
+composer install
+```
+7. Para instalar las dependencias de npm ejecuta:
+```
+npm install
+```
+8. Para generar la llave de laravel ejecuta:
+```
+php artisan key:generate
+```
+9. Para poner en marcha el servidor local ejecuta:
+```
+php artisan serve
+```
+Y sigue el link que aparece en pantalla.
+
+Nuevamente, no olvide generar las credenciales de github. Para mayor información en como hacerlo visita el sitio oficial
+de github: https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token
+
+## Puntos importantes del código
+Las carpetas principales donde se hacen los cambios y se almacenan los archivos para el funcionamiento de la web app son:
+
+1. app/http/controllers/ ---> aquí se encuentran los controladores encargados de modelar los objetos de la API y hacer su envoltura,
+   para que en caso de que la API cambie, únicamente se tenga que cambiar el código de los métodos de los controladores en lugar
+   de todos los lugares donde se usara la API (en caso de que no se hiciera una envoltura).
+  
+2. app/public/js ---> aquí se encuentra un pequeño archivo custom.js para implementar una pequeña funcionalidad de la web app.
+
+3. app/resources/views ---> En esta carpeta encontraremos todas las vistas usadas en esta pequeña web app, así como otra carpeta layout
+   donde se encuentra el layout principal de la app, que extendemos a las demas vistas usando la funcionalidad de blade.
+   
+4. app/routes ---> Por último, aquí se encuentran las rutas que usaremos para las vistas, siendo que las que usamos se encuentran en
+   el archivo de web.php
+   
+Todo el código se encuentra documentado.
+
 
 # 99minutos Fullstack Engineer Interview
 Interview test for fullstack Software Engineers
